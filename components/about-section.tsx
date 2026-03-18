@@ -1,0 +1,54 @@
+import Image from "next/image";
+import Link from "next/link";
+import { Reveal } from "@/components/reveal";
+
+export function AboutSection() {
+  return (
+    <section id="about" className="bg-ivory py-36">
+      <div className="container-shell">
+        <div className="grid items-center gap-20 lg:grid-cols-2">
+          {/* Image */}
+          <Reveal variant="scale">
+            <div className="relative aspect-[3/4] overflow-hidden">
+              <Image
+                src="/images/santa-ray/patio-evening.webp"
+                alt="769 Santa Ray Ave — evening patio"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </Reveal>
+
+          {/* Text */}
+          <Reveal variant="up" delay={200}>
+            <div className="lg:pl-4">
+              <p className="mb-8 text-[10px] uppercase tracking-[0.4em] text-champagne">
+                About
+              </p>
+              <h2 className="display mb-10 text-[clamp(2.5rem,5vw,3.5rem)] leading-[1.05] text-navy">
+                Family&#8209;Owned.<br />East Bay Focused.
+              </h2>
+              <div className="mb-10 h-px w-12 bg-taupe" />
+              <p className="mb-6 text-sm leading-[1.9] text-slate">
+                Altai Ventures is a family-owned residential real estate portfolio
+                in the East Bay. We manage three properties — one private short-term
+                suite and two long-term homes in Castro Valley and Oakland.
+              </p>
+              <p className="mb-12 text-sm leading-[1.9] text-slate">
+                Our approach is simple: be responsive, maintain high standards, and
+                build genuine relationships with the people we house. We&#39;re not a
+                management company — we&#39;re owners who care about every detail.
+              </p>
+              <Link
+                href="/properties"
+                className="border-b border-champagne/50 pb-1 text-[10px] uppercase tracking-[0.3em] text-navy transition-all duration-500 hover:border-champagne hover:text-champagne"
+              >
+                View Our Properties
+              </Link>
+            </div>
+          </Reveal>
+        </div>
+      </div>
+    </section>
+  );
+}
