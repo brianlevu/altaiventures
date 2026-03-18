@@ -1,10 +1,63 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getPropertyBySlug, properties } from "@/lib/properties";
+import {
+  LodgingBusinessJsonLd,
+  ResidenceJsonLd,
+} from "@/components/structured-data";
 
 export function generateStaticParams() {
   return properties.map((property) => ({ slug: property.slug }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const property = getPropertyBySlug(slug);
+
+  if (!property) {
+    return { title: "Property Not Found" };
+  }
+
+  const isShortTerm = property.type === "short-term";
+  const title = isShortTerm
+    ? `${property.street}, ${property.city} — Short-Term Airbnb Rental`
+    : `${property.street}, ${property.city} — House for Rent`;
+  const description = isShortTerm
+    ? `Book a short-term vacation rental at ${property.street} in ${property.city}. ${property.summary} Private Airbnb in Oakland's East Bay.`
+    : `${property.street} in ${property.city} — ${property.summary} Long-term rental home in Castro Valley's East Bay.`;
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: `https://altaiventures.co/properties/${slug}`,
+    },
+    openGraph: {
+      title: `${title} | Altai Ventures`,
+      description,
+      url: `https://altaiventures.co/properties/${slug}`,
+      images: [
+        {
+          url: property.heroImage,
+          width: 1200,
+          height: 630,
+          alt: `${property.name} — ${property.city}`,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${title} | Altai Ventures`,
+      description,
+      images: [property.heroImage],
+    },
+  };
 }
 
 export default async function PropertyDetailPage({
@@ -19,8 +72,38 @@ export default async function PropertyDetailPage({
     notFound();
   }
 
+  const propertyUrl = `https://altaiventures.co/properties/${property.slug}`;
+
   return (
     <>
+      {/* Structured Data */}
+      {property.type === "short-term" ? (
+        <LodgingBusinessJsonLd
+          name={property.name}
+          street={property.street}
+          city={property.city}
+          description={property.description}
+          url={propertyUrl}
+          beds={property.beds}
+          baths={property.baths}
+          sqft={property.sqft}
+          features={property.features}
+          image={property.heroImage}
+        />
+      ) : (
+        <ResidenceJsonLd
+          name={property.name}
+          street={property.street}
+          city={property.city}
+          description={property.description}
+          url={propertyUrl}
+          beds={property.beds}
+          baths={property.baths}
+          sqft={property.sqft}
+          image={property.heroImage}
+        />
+      )}
+
       {/* Hero */}
       <section className="relative flex h-[70vh] min-h-[500px] items-end">
         <Image

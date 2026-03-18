@@ -1,6 +1,22 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { properties } from "@/lib/properties";
+
+export const metadata: Metadata = {
+  title: "Rental Properties — Oakland & Castro Valley",
+  description:
+    "Browse Altai Ventures rental properties in Oakland and Castro Valley, CA. Short-term Airbnb vacation rental in Oakland and long-term houses for rent in Castro Valley's East Bay neighborhood.",
+  alternates: {
+    canonical: "https://altaiventures.co/properties",
+  },
+  openGraph: {
+    title: "Rental Properties — Oakland & Castro Valley | Altai Ventures",
+    description:
+      "Three thoughtfully managed East Bay homes — one short-term Airbnb rental in Oakland, two long-term residences in Castro Valley.",
+    url: "https://altaiventures.co/properties",
+  },
+};
 
 export default function PropertiesPage() {
   return (

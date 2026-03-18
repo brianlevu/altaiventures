@@ -3,9 +3,18 @@ import Image from "next/image";
 import { Logo } from "@/components/logo";
 
 export const metadata: Metadata = {
-  title: "Brand Identity | Altai Ventures",
+  title: "Brand Identity & Press Guidelines",
   description:
-    "Brand guidelines, design system, and press resources for Altai Ventures.",
+    "Brand guidelines, design system, and press resources for Altai Ventures. Family-owned East Bay rental property portfolio in Oakland and Castro Valley, California.",
+  alternates: {
+    canonical: "https://altaiventures.co/brand",
+  },
+  openGraph: {
+    title: "Brand Identity & Press Guidelines | Altai Ventures",
+    description:
+      "Brand guidelines, design system, and press resources for Altai Ventures.",
+    url: "https://altaiventures.co/brand",
+  },
 };
 
 const colors = [
