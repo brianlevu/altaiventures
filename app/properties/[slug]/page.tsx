@@ -7,6 +7,7 @@ import {
   LodgingBusinessJsonLd,
   ResidenceJsonLd,
 } from "@/components/structured-data";
+import { Gallery } from "@/components/gallery";
 
 export function generateStaticParams() {
   return properties.map((property) => ({ slug: property.slug }));
@@ -156,21 +157,7 @@ export default async function PropertyDetailPage({
                 <p className="mb-8 text-[10px] uppercase tracking-[0.4em] text-champagne">
                   Gallery
                 </p>
-                <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-                  {property.gallery.map((image, index) => (
-                    <div
-                      key={`${property.slug}-${index}`}
-                      className="group relative aspect-[4/3] overflow-hidden"
-                    >
-                      <Image
-                        src={image}
-                        alt={`${property.name} — photo ${index + 1}`}
-                        fill
-                        className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
-                      />
-                    </div>
-                  ))}
-                </div>
+                <Gallery images={property.gallery} name={property.name} />
               </div>
             </div>
 
