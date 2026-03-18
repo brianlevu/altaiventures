@@ -130,7 +130,7 @@ export default async function PropertyDetailPage({
           <div className="grid gap-20 lg:grid-cols-[1fr,340px]">
             {/* Main */}
             <div>
-              <p className="text-base leading-[2] text-slate">
+              <p className="text-base leading-[2] text-navy/70">
                 {property.description}
               </p>
 

@@ -13,7 +13,7 @@ export function ContactSection() {
             <h2 className="display mb-8 text-[clamp(2rem,4vw,3.5rem)] text-navy">
               Begin Your Inquiry
             </h2>
-            <p className="text-sm leading-[1.9] text-slate">
+            <p className="text-sm leading-[1.9] text-navy/70">
               Interested in Santa Ray for a short stay, or want updates when a
               long-term home becomes available? We respond within two business days.
             </p>
@@ -29,7 +29,7 @@ export function ContactSection() {
                   type="text"
                   name="name"
                   placeholder="Full Name"
-                  className="w-full bg-transparent text-sm text-navy placeholder:text-slate/30 outline-none tracking-wide"
+                  className="w-full bg-transparent text-sm text-navy placeholder:text-slate/60 outline-none tracking-wide"
                   required
                 />
               </div>
@@ -38,14 +38,14 @@ export function ContactSection() {
                   type="email"
                   name="email"
                   placeholder="Email Address"
-                  className="w-full bg-transparent text-sm text-navy placeholder:text-slate/30 outline-none tracking-wide"
+                  className="w-full bg-transparent text-sm text-navy placeholder:text-slate/60 outline-none tracking-wide"
                   required
                 />
               </div>
               <div className="border-b border-taupe/60 pb-3 transition-colors duration-200 ease-out focus-within:border-champagne md:col-span-2">
                 <select
                   name="interest"
-                  className="w-full bg-transparent text-sm text-slate/60 outline-none tracking-wide appearance-none cursor-pointer"
+                  className="w-full bg-transparent text-sm text-slate/70 outline-none tracking-wide appearance-none cursor-pointer"
                 >
                   <option value="">Area of Interest</option>
                   <option value="santa-ray">769 Santa Ray — Short-term booking</option>
@@ -59,7 +59,7 @@ export function ContactSection() {
                   name="message"
                   placeholder="Your Message"
                   rows={4}
-                  className="w-full resize-none bg-transparent text-sm text-navy placeholder:text-slate/30 outline-none tracking-wide"
+                  className="w-full resize-none bg-transparent text-sm text-navy placeholder:text-slate/60 outline-none tracking-wide"
                 />
               </div>
             </div>

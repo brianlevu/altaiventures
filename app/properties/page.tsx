@@ -79,7 +79,7 @@ export default function PropertiesPage() {
                   <p className="mb-6 text-[11px] uppercase tracking-[0.25em] text-slate/60">
                     {property.city}
                   </p>
-                  <p className="mb-8 max-w-md text-sm leading-[1.8] text-slate">
+                  <p className="mb-8 max-w-md text-sm leading-[1.8] text-navy/70">
                     {property.summary}
                   </p>
 

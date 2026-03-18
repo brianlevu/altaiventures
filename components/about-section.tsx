@@ -29,12 +29,12 @@ export function AboutSection() {
                 Family&#8209;Owned.<br />East Bay Focused.
               </h2>
               <div className="mb-10 h-px w-12 bg-taupe" />
-              <p className="mb-6 text-sm leading-[1.9] text-slate">
+              <p className="mb-6 text-sm leading-[1.9] text-navy/70">
                 Altai Ventures is a family-owned residential real estate portfolio
                 in the East Bay. We manage three properties — one private short-term
                 suite and two long-term homes in Castro Valley and Oakland.
               </p>
-              <p className="mb-12 text-sm leading-[1.9] text-slate">
+              <p className="mb-12 text-sm leading-[1.9] text-navy/70">
                 Our approach is simple: be responsive, maintain high standards, and
                 build genuine relationships with the people we house. We&#39;re not a
                 management company — we&#39;re owners who care about every detail.

@@ -51,7 +51,7 @@ export function PropertiesSection() {
                 <h3 className="display mb-4 text-[2.5rem] text-navy">
                   {primary.street}
                 </h3>
-                <p className="mb-8 max-w-lg text-sm leading-[1.8] text-slate">
+                <p className="mb-8 max-w-lg text-sm leading-[1.8] text-navy/70">
                   {primary.summary}
                 </p>
                 <Link
@@ -84,7 +84,7 @@ export function PropertiesSection() {
                     <h3 className="display mb-3 text-2xl text-navy">
                       {prop.street}
                     </h3>
-                    <p className="mb-6 text-sm leading-relaxed text-slate">
+                    <p className="mb-6 text-sm leading-relaxed text-navy/70">
                       {prop.summary}
                     </p>
                     <Link
