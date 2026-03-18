@@ -26,7 +26,7 @@ export function Navbar() {
           <Logo
             variant="horizontal"
             color={scrolled ? "dark" : "light"}
-            size={scrolled ? "xs" : "sm"}
+            size="sm"
           />
         </Link>
 
@@ -40,7 +40,7 @@ export function Navbar() {
             <Link
               key={label}
               href={href}
-              className={`relative py-3 text-[10px] uppercase tracking-[0.3em] transition-colors duration-150 ease-out ${
+              className={`relative py-3 text-[11px] uppercase tracking-[0.25em] transition-colors duration-150 ease-out ${
                 scrolled
                   ? "text-slate hover:text-navy"
                   : "text-white/60 hover:text-white"
@@ -54,7 +54,7 @@ export function Navbar() {
         {/* ux-fitts-target-size: py-3.5 for 36px+ button height */}
         <Link
           href="/properties/769-santa-ray"
-          className={`text-[10px] uppercase tracking-[0.25em] px-7 py-3.5 border transition-all duration-150 ease-out active:scale-[0.98] ${
+          className={`text-[11px] uppercase tracking-[0.2em] px-7 py-3.5 border transition-all duration-150 ease-out active:scale-[0.98] ${
             scrolled
               ? "border-navy text-navy hover:bg-navy hover:text-ivory"
               : "border-white/30 text-white/80 hover:border-white hover:bg-white/10"
