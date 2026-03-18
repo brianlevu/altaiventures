@@ -166,7 +166,7 @@ export default async function PropertyDetailPage({
                         src={image}
                         alt={`${property.name} — photo ${index + 1}`}
                         fill
-                        className="object-cover transition-transform duration-1000 ease-out group-hover:scale-[1.05]"
+                        className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
                       />
                     </div>
                   ))}
@@ -219,14 +219,14 @@ export default async function PropertyDetailPage({
                     href={property.ctaHref}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-10 block w-full border border-navy bg-navy px-6 py-4 text-center text-[10px] uppercase tracking-[0.3em] text-ivory transition-all duration-500 hover:bg-transparent hover:text-navy"
+                    className="mt-10 block w-full border border-navy bg-navy px-6 py-4 text-center text-[10px] uppercase tracking-[0.3em] text-ivory transition-all duration-150 hover:bg-transparent hover:text-navy"
                   >
                     {property.ctaLabel}
                   </a>
                 ) : (
                   <Link
                     href={property.ctaHref}
-                    className="mt-10 block w-full border border-navy px-6 py-4 text-center text-[10px] uppercase tracking-[0.3em] text-navy transition-all duration-500 hover:bg-navy hover:text-ivory"
+                    className="mt-10 block w-full border border-navy px-6 py-4 text-center text-[10px] uppercase tracking-[0.3em] text-navy transition-all duration-150 hover:bg-navy hover:text-ivory"
                   >
                     {property.ctaLabel}
                   </Link>
@@ -235,7 +235,7 @@ export default async function PropertyDetailPage({
 
               <Link
                 href="/properties"
-                className="mt-10 block text-center text-[10px] uppercase tracking-[0.3em] text-slate transition-colors duration-500 hover:text-navy"
+                className="mt-10 block text-center text-[10px] uppercase tracking-[0.3em] text-slate transition-colors duration-150 hover:text-navy"
               >
                 ← All Properties
               </Link>

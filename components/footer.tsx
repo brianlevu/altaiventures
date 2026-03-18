@@ -12,8 +12,8 @@ export function Footer() {
           <Logo variant="stacked" color="light" size="md" />
         </div>
 
-        {/* Nav */}
-        <nav className="flex flex-wrap justify-center gap-10 mb-16">
+        {/* Nav — py-3 for ux-fitts-hit-area on small text links */}
+        <nav className="flex flex-wrap justify-center gap-8 mb-16">
           {[
             ["Properties", "/properties"],
             ["About", "/#about"],
@@ -23,7 +23,7 @@ export function Footer() {
             <Link
               key={label}
               href={href}
-              className="text-[10px] uppercase tracking-[0.35em] text-white/45 transition-colors duration-500 hover:text-white"
+              className="py-3 text-[10px] uppercase tracking-[0.35em] text-white/45 transition-colors duration-150 ease-out hover:text-white"
             >
               {label}
             </Link>
@@ -37,7 +37,7 @@ export function Footer() {
         <div className="mb-16 text-center">
           <a
             href="mailto:hello@altaiventures.co"
-            className="text-[11px] tracking-[0.2em] text-white/50 transition-colors duration-500 hover:text-champagne"
+            className="py-3 text-[11px] tracking-[0.2em] text-white/50 transition-colors duration-150 ease-out hover:text-champagne"
           >
             hello@altaiventures.co
           </a>

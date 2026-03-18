@@ -7,7 +7,7 @@
   /* ── Core palette ───────────────────────────────── */
   --color-navy:      #0D1B2A;   /* primary dark        */
   --color-champagne: #C9A87C;   /* gold accent         */
-  --color-ivory:     #FAF8F5;   /* light backgrounds — warmer, Aman-inspired */
+  --color-ivory:     #FAF8F5;   /* light backgrounds   */
   --color-white:     #FFFFFF;
   --color-slate:     #6B7280;   /* secondary text      */
   --color-taupe:     #E8DDD0;   /* borders / dividers  */
@@ -29,10 +29,15 @@ body {
   color: var(--color-navy);
   font-family: var(--font-montserrat), Arial, Helvetica, sans-serif;
   font-weight: 400;
+  -webkit-font-smoothing: antialiased;       /* type-antialiased-on-retina */
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;                  /* type-optical-sizing-auto */
+  font-feature-settings: "calt" 1;            /* type-opentype-contextual-alternates */
 }
 
+/* duration-press-hover: 150ms for interactive hover/press */
 a {
-  transition: all 300ms ease;
+  transition: color 150ms ease-out, border-color 150ms ease-out, background-color 150ms ease-out, opacity 150ms ease-out;
 }
 
 .container-shell {
@@ -45,10 +50,31 @@ a {
   font-family: var(--font-cormorant), Georgia, serif;
   letter-spacing: -0.01em;
   font-weight: 600;
+  font-synthesis: none;                        /* type-no-font-synthesis */
+}
+
+/* type-text-wrap-balance-headings */
+h1, h2, h3, h4 {
+  text-wrap: balance;
+}
+
+/* type-text-wrap-pretty */
+p {
+  text-wrap: pretty;
 }
 
 /* ── Selection ──────────────────────────────────── */
 ::selection {
   background: var(--color-champagne);
   color: var(--color-navy);
+}
+
+/* ── Reduced motion ─────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

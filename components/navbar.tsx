@@ -15,14 +15,14 @@ export function Navbar() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-700 ${
+      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ease-out ${
         scrolled
           ? "bg-ivory/95 backdrop-blur-md border-b border-taupe/30"
           : "bg-transparent"
       }`}
     >
       <div className="container-shell flex h-20 items-center justify-between">
-        <Link href="/" className="transition-opacity duration-300 hover:opacity-70">
+        <Link href="/" className="transition-opacity duration-150 hover:opacity-70">
           <Logo
             variant="horizontal"
             color={scrolled ? "dark" : "light"}
@@ -30,7 +30,8 @@ export function Navbar() {
           />
         </Link>
 
-        <nav className="hidden items-center gap-12 md:flex">
+        {/* ux-fitts-hit-area: nav links get py-3 for 32px+ touch target */}
+        <nav className="hidden items-center gap-8 md:flex">
           {[
             ["Properties", "/properties"],
             ["About", "/#about"],
@@ -39,7 +40,7 @@ export function Navbar() {
             <Link
               key={label}
               href={href}
-              className={`text-[10px] uppercase tracking-[0.3em] transition-colors duration-500 ${
+              className={`relative py-3 text-[10px] uppercase tracking-[0.3em] transition-colors duration-150 ease-out ${
                 scrolled
                   ? "text-slate hover:text-navy"
                   : "text-white/60 hover:text-white"
@@ -50,9 +51,10 @@ export function Navbar() {
           ))}
         </nav>
 
+        {/* ux-fitts-target-size: py-3.5 for 36px+ button height */}
         <Link
           href="/properties/769-santa-ray"
-          className={`text-[10px] uppercase tracking-[0.25em] px-7 py-2.5 border transition-all duration-500 ${
+          className={`text-[10px] uppercase tracking-[0.25em] px-7 py-3.5 border transition-all duration-150 ease-out active:scale-[0.98] ${
             scrolled
               ? "border-navy text-navy hover:bg-navy hover:text-ivory"
               : "border-white/30 text-white/80 hover:border-white hover:bg-white/10"

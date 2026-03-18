@@ -21,10 +21,10 @@ export function PropertiesSection() {
               </h2>
             </div>
           </Reveal>
-          <Reveal variant="fade" delay={300}>
+          <Reveal variant="fade" delay={50}>
             <Link
               href="/properties"
-              className="hidden items-center gap-2 border-b border-champagne/40 pb-1 text-[10px] uppercase tracking-[0.3em] text-navy transition-colors duration-500 hover:border-champagne md:flex"
+              className="hidden items-center gap-2 border-b border-champagne/40 pb-1 text-[10px] uppercase tracking-[0.3em] text-navy transition-colors duration-150 ease-out hover:border-champagne md:flex"
             >
               All Properties
             </Link>
@@ -41,7 +41,7 @@ export function PropertiesSection() {
                   src={primary.heroImage}
                   alt={primary.name}
                   fill
-                  className="object-cover transition-transform duration-1000 ease-out group-hover:scale-[1.04]"
+                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
                 />
               </div>
               <div className="pb-4 pr-10 pt-10">
@@ -56,7 +56,7 @@ export function PropertiesSection() {
                 </p>
                 <Link
                   href={`/properties/${primary.slug}`}
-                  className="border-b border-champagne/50 pb-1 text-[10px] uppercase tracking-[0.3em] text-navy transition-all duration-500 hover:border-champagne hover:text-champagne"
+                  className="inline-block border-b border-champagne/50 pb-1 text-[10px] uppercase tracking-[0.3em] text-navy transition-colors duration-150 ease-out hover:border-champagne hover:text-champagne"
                 >
                   Discover More
                 </Link>
@@ -64,17 +64,17 @@ export function PropertiesSection() {
             </article>
           </Reveal>
 
-          {/* Secondary stack */}
+          {/* Secondary stack — stagger 40ms per item */}
           <div className="flex flex-col gap-px bg-taupe/60 lg:col-span-5">
             {secondary.map((prop, i) => (
-              <Reveal key={prop.slug} variant="up" delay={200 + i * 150}>
+              <Reveal key={prop.slug} variant="up" delay={i * 40}>
                 <article className="group flex flex-1 flex-col bg-ivory">
                   <div className="relative h-60 overflow-hidden">
                     <Image
                       src={prop.heroImage}
                       alt={prop.name}
                       fill
-                      className="object-cover transition-transform duration-1000 ease-out group-hover:scale-[1.04]"
+                      className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
                     />
                   </div>
                   <div className="flex flex-1 flex-col px-8 pb-8 pt-8">
@@ -89,7 +89,7 @@ export function PropertiesSection() {
                     </p>
                     <Link
                       href={`/properties/${prop.slug}`}
-                      className="mt-auto w-fit border-b border-champagne/50 pb-1 text-[10px] uppercase tracking-[0.3em] text-navy transition-all duration-500 hover:border-champagne hover:text-champagne"
+                      className="mt-auto w-fit inline-block border-b border-champagne/50 pb-1 text-[10px] uppercase tracking-[0.3em] text-navy transition-colors duration-150 ease-out hover:border-champagne hover:text-champagne"
                     >
                       Discover More
                     </Link>

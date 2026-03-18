@@ -7,20 +7,20 @@ export function AboutSection() {
     <section id="about" className="bg-ivory py-36">
       <div className="container-shell">
         <div className="grid items-center gap-20 lg:grid-cols-2">
-          {/* Image */}
+          {/* Image — hover parallax for delight */}
           <Reveal variant="scale">
-            <div className="relative aspect-[3/4] overflow-hidden">
+            <div className="group relative aspect-[3/4] overflow-hidden">
               <Image
                 src="/images/santa-ray/patio-evening.webp"
                 alt="769 Santa Ray Ave — evening patio"
                 fill
-                className="object-cover"
+                className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
               />
             </div>
           </Reveal>
 
-          {/* Text */}
-          <Reveal variant="up" delay={200}>
+          {/* Text — stagger 40ms */}
+          <Reveal variant="up" delay={40}>
             <div className="lg:pl-4">
               <p className="mb-8 text-[10px] uppercase tracking-[0.4em] text-champagne">
                 About
@@ -41,7 +41,7 @@ export function AboutSection() {
               </p>
               <Link
                 href="/properties"
-                className="border-b border-champagne/50 pb-1 text-[10px] uppercase tracking-[0.3em] text-navy transition-all duration-500 hover:border-champagne hover:text-champagne"
+                className="inline-block border-b border-champagne/50 pb-1 text-[10px] uppercase tracking-[0.3em] text-navy transition-colors duration-150 ease-out hover:border-champagne hover:text-champagne"
               >
                 View Our Properties
               </Link>

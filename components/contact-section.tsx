@@ -21,10 +21,10 @@ export function ContactSection() {
         </Reveal>
 
         {/* Form */}
-        <Reveal variant="up" delay={200}>
+        <Reveal variant="up" delay={40}>
           <form className="mx-auto max-w-2xl">
             <div className="grid gap-12 md:grid-cols-2">
-              <div className="group border-b border-taupe/60 pb-3 transition-colors duration-500 focus-within:border-champagne">
+              <div className="group border-b border-taupe/60 pb-3 transition-colors duration-200 ease-out focus-within:border-champagne">
                 <input
                   type="text"
                   name="name"
@@ -33,7 +33,7 @@ export function ContactSection() {
                   required
                 />
               </div>
-              <div className="group border-b border-taupe/60 pb-3 transition-colors duration-500 focus-within:border-champagne">
+              <div className="group border-b border-taupe/60 pb-3 transition-colors duration-200 ease-out focus-within:border-champagne">
                 <input
                   type="email"
                   name="email"
@@ -42,7 +42,7 @@ export function ContactSection() {
                   required
                 />
               </div>
-              <div className="border-b border-taupe/60 pb-3 transition-colors duration-500 focus-within:border-champagne md:col-span-2">
+              <div className="border-b border-taupe/60 pb-3 transition-colors duration-200 ease-out focus-within:border-champagne md:col-span-2">
                 <select
                   name="interest"
                   className="w-full bg-transparent text-sm text-slate/60 outline-none tracking-wide appearance-none cursor-pointer"
@@ -54,7 +54,7 @@ export function ContactSection() {
                   <option value="general">General inquiry</option>
                 </select>
               </div>
-              <div className="border-b border-taupe/60 pb-3 transition-colors duration-500 focus-within:border-champagne md:col-span-2">
+              <div className="border-b border-taupe/60 pb-3 transition-colors duration-200 ease-out focus-within:border-champagne md:col-span-2">
                 <textarea
                   name="message"
                   placeholder="Your Message"
@@ -67,7 +67,7 @@ export function ContactSection() {
             <div className="mt-16 text-center">
               <button
                 type="submit"
-                className="border border-navy px-12 py-4 text-[10px] uppercase tracking-[0.35em] text-navy transition-all duration-500 hover:bg-navy hover:text-ivory"
+                className="border border-navy px-12 py-4 text-[10px] uppercase tracking-[0.35em] text-navy transition-all duration-150 ease-out hover:bg-navy hover:text-ivory active:scale-[0.98]"
               >
                 Send Inquiry
               </button>

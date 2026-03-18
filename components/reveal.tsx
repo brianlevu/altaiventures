@@ -12,9 +12,9 @@ interface RevealProps {
 }
 
 const hiddenStyles: Record<Variant, string> = {
-  up: "translate3d(0, 40px, 0)",
+  up: "translate3d(0, 24px, 0)",    // subtler 24px (was 40)
   fade: "none",
-  scale: "scale(0.97)",
+  scale: "scale(0.98)",
 };
 
 export function Reveal({
@@ -27,6 +27,15 @@ export function Reveal({
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
+    // prefers-reduced-motion: skip animation entirely
+    const prefersReduced = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+    if (prefersReduced) {
+      setVisible(true);
+      return;
+    }
+
     const el = ref.current;
     if (!el) return;
 
@@ -44,6 +53,9 @@ export function Reveal({
     return () => observer.disconnect();
   }, []);
 
+  // easing-entrance-ease-out: ease-out curve for entrances
+  const easing = "cubic-bezier(0.16, 1, 0.3, 1)";
+
   return (
     <div
       ref={ref}
@@ -51,7 +63,8 @@ export function Reveal({
       style={{
         opacity: visible ? 1 : 0,
         transform: visible ? "none" : hiddenStyles[variant],
-        transition: `opacity 800ms cubic-bezier(0.16, 1, 0.3, 1) ${delay}ms, transform 800ms cubic-bezier(0.16, 1, 0.3, 1) ${delay}ms`,
+        transition: `opacity 600ms ${easing} ${delay}ms, transform 600ms ${easing} ${delay}ms`,
+        willChange: visible ? "auto" : "opacity, transform",
       }}
     >
       {children}

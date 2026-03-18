@@ -64,7 +64,7 @@ export default function PropertiesPage() {
                     src={property.heroImage}
                     alt={property.name}
                     fill
-                    className="object-cover transition-transform duration-1000 ease-out group-hover:scale-[1.04]"
+                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
                   />
                 </div>
 
@@ -87,7 +87,7 @@ export default function PropertiesPage() {
                   <div className="mb-10 flex gap-8">
                     {property.beds && (
                       <div>
-                        <p className="display text-2xl text-navy">{property.beds}</p>
+                        <p className="display text-2xl text-navy tabular-nums">{property.beds}</p>
                         <p className="mt-1 text-[8px] uppercase tracking-[0.3em] text-slate/50">
                           Bedrooms
                         </p>
@@ -95,7 +95,7 @@ export default function PropertiesPage() {
                     )}
                     {property.baths && (
                       <div>
-                        <p className="display text-2xl text-navy">{property.baths}</p>
+                        <p className="display text-2xl text-navy tabular-nums">{property.baths}</p>
                         <p className="mt-1 text-[8px] uppercase tracking-[0.3em] text-slate/50">
                           Bathrooms
                         </p>
@@ -103,7 +103,7 @@ export default function PropertiesPage() {
                     )}
                     {property.sqft && (
                       <div>
-                        <p className="display text-2xl text-navy">
+                        <p className="display text-2xl text-navy tabular-nums">
                           {property.sqft.toLocaleString()}
                         </p>
                         <p className="mt-1 text-[8px] uppercase tracking-[0.3em] text-slate/50">
@@ -115,7 +115,7 @@ export default function PropertiesPage() {
 
                   <Link
                     href={`/properties/${property.slug}`}
-                    className="w-fit border-b border-champagne/50 pb-1 text-[10px] uppercase tracking-[0.3em] text-navy transition-all duration-500 hover:border-champagne hover:text-champagne"
+                    className="w-fit border-b border-champagne/50 pb-1 text-[10px] uppercase tracking-[0.3em] text-navy transition-all duration-150 hover:border-champagne hover:text-champagne"
                   >
                     Discover More
                   </Link>

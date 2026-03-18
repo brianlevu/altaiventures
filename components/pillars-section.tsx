@@ -15,6 +15,7 @@ export function PillarsSection() {
           </div>
         </Reveal>
 
+        {/* stagger 40ms per item (physics-no-excessive-stagger) */}
         <div className="grid divide-y divide-white/8 md:grid-cols-3 md:divide-x md:divide-y-0">
           {[
             {
@@ -33,9 +34,9 @@ export function PillarsSection() {
               body: "We focus on long-term tenants and returning guests. High turnover is never our goal — trust is built over time.",
             },
           ].map((pillar, i) => (
-            <Reveal key={pillar.num} variant="up" delay={i * 200}>
+            <Reveal key={pillar.num} variant="up" delay={i * 40}>
               <div className="border-t border-champagne/40 px-0 pb-10 pt-10 first:pl-0 last:pr-0 md:px-12">
-                <p className="mb-8 text-[10px] uppercase tracking-[0.4em] text-champagne/60">
+                <p className="mb-8 text-[10px] uppercase tracking-[0.4em] text-champagne/60 tabular-nums">
                   {pillar.num}
                 </p>
                 <h3 className="display mb-5 whitespace-pre-line text-[1.75rem] leading-[1.1] text-ivory">
