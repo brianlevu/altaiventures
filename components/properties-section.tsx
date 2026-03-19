@@ -13,7 +13,7 @@ export function PropertiesSection() {
         <div className="mb-20 flex items-end justify-between">
           <Reveal variant="up">
             <div>
-              <p className="mb-5 text-[10px] uppercase tracking-[0.4em] text-champagne">
+              <p className="mb-5 text-xs uppercase tracking-[0.3em] text-champagne">
                 Our Portfolio
               </p>
               <h2 className="display text-[clamp(2.5rem,5vw,4rem)] text-navy">
@@ -24,7 +24,7 @@ export function PropertiesSection() {
           <Reveal variant="fade" delay={50}>
             <Link
               href="/properties"
-              className="hidden items-center gap-2 border-b border-champagne/40 pb-1 text-[10px] uppercase tracking-[0.3em] text-navy transition-colors duration-150 ease-out hover:border-champagne md:flex"
+              className="hidden items-center gap-2 border-b border-champagne/40 pb-1 text-xs uppercase tracking-[0.2em] text-navy transition-colors duration-150 ease-out hover:border-champagne md:flex"
             >
               All Properties
             </Link>
@@ -45,18 +45,18 @@ export function PropertiesSection() {
                 />
               </div>
               <div className="pb-4 pr-10 pt-10">
-                <p className="mb-4 text-[9px] uppercase tracking-[0.4em] text-champagne">
+                <p className="mb-4 text-xs uppercase tracking-[0.3em] text-champagne">
                   {primary.type.replace("-", " ")} · {primary.city}
                 </p>
                 <h3 className="display mb-4 text-[2.5rem] text-navy">
                   {primary.street}
                 </h3>
-                <p className="mb-8 max-w-lg text-sm leading-[1.8] text-navy/70">
+                <p className="mb-8 max-w-lg text-base leading-[1.8] text-navy/80">
                   {primary.summary}
                 </p>
                 <Link
                   href={`/properties/${primary.slug}`}
-                  className="inline-block border-b border-champagne/50 pb-1 text-[10px] uppercase tracking-[0.3em] text-navy transition-colors duration-150 ease-out hover:border-champagne hover:text-champagne"
+                  className="inline-block border-b border-champagne/50 pb-1 text-xs uppercase tracking-[0.2em] text-navy transition-colors duration-150 ease-out hover:border-champagne hover:text-champagne"
                 >
                   Discover More
                 </Link>
@@ -78,18 +78,18 @@ export function PropertiesSection() {
                     />
                   </div>
                   <div className="flex flex-1 flex-col px-8 pb-8 pt-8">
-                    <p className="mb-3 text-[9px] uppercase tracking-[0.4em] text-champagne">
+                    <p className="mb-3 text-xs uppercase tracking-[0.3em] text-champagne">
                       {prop.type.replace("-", " ")} · {prop.city}
                     </p>
                     <h3 className="display mb-3 text-2xl text-navy">
                       {prop.street}
                     </h3>
-                    <p className="mb-6 text-sm leading-relaxed text-navy/70">
+                    <p className="mb-6 text-base leading-relaxed text-navy/80">
                       {prop.summary}
                     </p>
                     <Link
                       href={`/properties/${prop.slug}`}
-                      className="mt-auto w-fit inline-block border-b border-champagne/50 pb-1 text-[10px] uppercase tracking-[0.3em] text-navy transition-colors duration-150 ease-out hover:border-champagne hover:text-champagne"
+                      className="mt-auto w-fit inline-block border-b border-champagne/50 pb-1 text-xs uppercase tracking-[0.2em] text-navy transition-colors duration-150 ease-out hover:border-champagne hover:text-champagne"
                     >
                       Discover More
                     </Link>

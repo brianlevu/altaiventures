@@ -21,29 +21,29 @@ export function AboutSection() {
             </div>
           </Reveal>
 
-          {/* Text — stagger 40ms */}
+          {/* Text */}
           <Reveal variant="up" delay={40}>
             <div className="lg:pl-4">
-              <p className="mb-8 text-[10px] uppercase tracking-[0.4em] text-champagne">
+              <p className="mb-6 text-xs uppercase tracking-[0.3em] text-champagne">
                 About
               </p>
-              <h2 className="display mb-10 text-[clamp(2.5rem,5vw,3.5rem)] leading-[1.05] text-navy">
+              <h2 className="display mb-8 text-[clamp(2.5rem,5vw,3.5rem)] leading-[1.05] text-navy">
                 Family&#8209;Owned.<br />East Bay Focused.
               </h2>
-              <div className="mb-10 h-px w-12 bg-taupe" />
-              <p className="mb-6 text-sm leading-[1.9] text-navy/70">
+              <div className="mb-8 h-px w-12 bg-taupe" />
+              <p className="mb-5 text-base leading-[1.8] text-navy/80">
                 Altai Ventures is a family-owned residential real estate portfolio
                 in the East Bay. We manage three properties — one private short-term
                 suite and two long-term homes in Castro Valley and Oakland.
               </p>
-              <p className="mb-12 text-sm leading-[1.9] text-navy/70">
+              <p className="mb-10 text-base leading-[1.8] text-navy/80">
                 Our approach is simple: be responsive, maintain high standards, and
                 build genuine relationships with the people we house. We&#39;re not a
                 management company — we&#39;re owners who care about every detail.
               </p>
               <Link
                 href="/properties"
-                className="inline-block border-b border-champagne/50 pb-1 text-[10px] uppercase tracking-[0.3em] text-navy transition-colors duration-150 ease-out hover:border-champagne hover:text-champagne"
+                className="inline-block border-b border-champagne/50 pb-1 text-xs uppercase tracking-[0.2em] text-navy transition-colors duration-150 ease-out hover:border-champagne hover:text-champagne"
               >
                 View Our Properties
               </Link>

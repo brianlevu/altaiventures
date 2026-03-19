@@ -23,7 +23,7 @@ export function Footer() {
             <Link
               key={label}
               href={href}
-              className="py-3 text-[10px] uppercase tracking-[0.35em] text-white/45 transition-colors duration-150 ease-out hover:text-white"
+              className="py-3 text-xs uppercase tracking-[0.25em] text-white/50 transition-colors duration-150 ease-out hover:text-white"
             >
               {label}
             </Link>
@@ -37,7 +37,7 @@ export function Footer() {
         <div className="mb-16 text-center">
           <a
             href="mailto:hello@altaiventures.co"
-            className="py-3 text-[11px] tracking-[0.2em] text-white/50 transition-colors duration-150 ease-out hover:text-champagne"
+            className="py-3 text-sm tracking-[0.15em] text-white/55 transition-colors duration-150 ease-out hover:text-champagne"
           >
             hello@altaiventures.co
           </a>
@@ -45,10 +45,10 @@ export function Footer() {
 
         {/* Bottom */}
         <div className="flex flex-wrap items-center justify-between gap-4">
-          <p className="text-[9px] text-white/15 tracking-[0.2em] uppercase">
+          <p className="text-[10px] text-white/25 tracking-[0.2em] uppercase">
             © {year} Altai Ventures
           </p>
-          <p className="text-[9px] text-white/15 tracking-[0.15em] uppercase">
+          <p className="text-[10px] text-white/25 tracking-[0.15em] uppercase">
             Castro Valley · Oakland · East Bay, CA
           </p>
         </div>
