@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { Reveal } from "@/components/reveal";
 
@@ -7,15 +6,18 @@ export function AboutSection() {
     <section id="about" className="bg-ivory py-36">
       <div className="container-shell">
         <div className="grid items-center gap-20 lg:grid-cols-2">
-          {/* Image — hover parallax for delight */}
+          {/* Video */}
           <Reveal variant="scale">
-            <div className="group relative aspect-[3/4] overflow-hidden">
-              <Image
-                src="/images/santa-ray/patio-evening.webp"
-                alt="769 Santa Ray Ave — evening patio"
-                fill
-                className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
-              />
+            <div className="relative aspect-[3/4] overflow-hidden">
+              <video
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="absolute inset-0 h-full w-full object-cover"
+              >
+                <source src="/videos/about.mp4" type="video/mp4" />
+              </video>
             </div>
           </Reveal>
 
