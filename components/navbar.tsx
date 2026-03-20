@@ -24,7 +24,7 @@ export function Navbar() {
           : "bg-transparent"
       }`}
     >
-      <div className={`container-shell flex items-center justify-between transition-all duration-300 ${isLandlordHours ? "h-16" : "h-20"}`}>
+      <div className={`container-shell flex items-center justify-between transition-all duration-300 ${isLandlordHours ? "h-14" : "h-16"}`}>
         <Link href="/" className="transition-opacity duration-150 hover:opacity-70">
           <Logo
             variant="horizontal"
