@@ -32,13 +32,13 @@ export default function PropertiesPage() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-navy/40 to-navy/20" />
         <div className="container-shell relative z-10 pb-16">
-          <p className="mb-5 text-[10px] uppercase tracking-[0.4em] text-champagne/80">
+          <p className="mb-5 text-xs uppercase tracking-[0.4em] text-champagne/80">
             Portfolio
           </p>
           <h1 className="display text-[clamp(3rem,6vw,5rem)] text-white">
             Our Properties
           </h1>
-          <p className="mt-4 max-w-lg text-sm leading-[1.8] text-white/60">
+          <p className="mt-4 max-w-lg text-base leading-[1.8] text-white/60">
             Three thoughtfully managed East Bay homes — one available for
             short-term stays, two long-term residences.
           </p>
@@ -46,7 +46,7 @@ export default function PropertiesPage() {
       </section>
 
       {/* Property listing */}
-      <section className="bg-ivory py-36">
+      <section className="bg-ivory py-28">
         <div className="container-shell">
           <div className="space-y-px bg-taupe/60">
             {properties.map((property, i) => (
@@ -70,7 +70,7 @@ export default function PropertiesPage() {
 
                 {/* Content */}
                 <div className="flex flex-col justify-center px-8 py-12 md:px-16">
-                  <p className="mb-4 text-[9px] uppercase tracking-[0.4em] text-champagne">
+                  <p className="mb-4 text-xs uppercase tracking-[0.4em] text-champagne">
                     {property.type.replace("-", " ")} · {property.status}
                   </p>
                   <h2 className="display mb-2 text-[clamp(2rem,4vw,3rem)] text-navy">
@@ -79,7 +79,7 @@ export default function PropertiesPage() {
                   <p className="mb-6 text-[11px] uppercase tracking-[0.25em] text-slate/60">
                     {property.city}
                   </p>
-                  <p className="mb-8 max-w-md text-sm leading-[1.8] text-navy/70">
+                  <p className="mb-8 max-w-md text-base leading-[1.8] text-navy/70">
                     {property.summary}
                   </p>
 
@@ -88,7 +88,7 @@ export default function PropertiesPage() {
                     {property.beds && (
                       <div>
                         <p className="display text-2xl text-navy tabular-nums">{property.beds}</p>
-                        <p className="mt-1 text-[8px] uppercase tracking-[0.3em] text-slate/50">
+                        <p className="mt-1 text-[10px] uppercase tracking-[0.3em] text-slate/50">
                           Bedrooms
                         </p>
                       </div>
@@ -96,7 +96,7 @@ export default function PropertiesPage() {
                     {property.baths && (
                       <div>
                         <p className="display text-2xl text-navy tabular-nums">{property.baths}</p>
-                        <p className="mt-1 text-[8px] uppercase tracking-[0.3em] text-slate/50">
+                        <p className="mt-1 text-[10px] uppercase tracking-[0.3em] text-slate/50">
                           Bathrooms
                         </p>
                       </div>
@@ -106,7 +106,7 @@ export default function PropertiesPage() {
                         <p className="display text-2xl text-navy tabular-nums">
                           {property.sqft.toLocaleString()}
                         </p>
-                        <p className="mt-1 text-[8px] uppercase tracking-[0.3em] text-slate/50">
+                        <p className="mt-1 text-[10px] uppercase tracking-[0.3em] text-slate/50">
                           Sq Ft
                         </p>
                       </div>
@@ -115,7 +115,7 @@ export default function PropertiesPage() {
 
                   <Link
                     href={`/properties/${property.slug}`}
-                    className="w-fit border-b border-champagne/50 pb-1 text-[10px] uppercase tracking-[0.3em] text-navy transition-all duration-150 hover:border-champagne hover:text-champagne"
+                    className="w-fit border-b border-champagne/50 pb-1 text-xs uppercase tracking-[0.3em] text-navy transition-all duration-150 hover:border-champagne hover:text-champagne"
                   >
                     Discover More
                   </Link>

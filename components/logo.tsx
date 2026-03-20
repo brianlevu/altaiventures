@@ -16,8 +16,8 @@ const wordmarkColor: Record<Color, string> = {
 
 const subColor: Record<Color, string> = {
   dark:  "text-champagne",
-  light: "text-white/50",
-  gold:  "text-white/40",
+  light: "text-white/60",
+  gold:  "text-white/50",
 };
 
 // Rendered height of the crest mark (SVG is ~944×1022, ~0.92 aspect)

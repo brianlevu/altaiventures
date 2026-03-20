@@ -116,7 +116,7 @@ export default async function PropertyDetailPage({
         />
         <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-navy/30 to-transparent" />
         <div className="container-shell relative z-10 pb-16">
-          <p className="mb-4 text-[9px] uppercase tracking-[0.4em] text-champagne/80">
+          <p className="mb-4 text-xs uppercase tracking-[0.4em] text-champagne/80">
             {property.type.replace("-", " ")} · {property.city}
           </p>
           <h1 className="display text-[clamp(3rem,7vw,5.5rem)] text-white">
@@ -126,25 +126,25 @@ export default async function PropertyDetailPage({
       </section>
 
       {/* Content */}
-      <section className="bg-ivory py-36">
+      <section className="bg-ivory py-28">
         <div className="container-shell">
           <div className="grid gap-20 lg:grid-cols-[1fr,340px]">
             {/* Main */}
             <div>
-              <p className="text-base leading-[2] text-navy/70">
+              <p className="text-base leading-[2] text-navy/80">
                 {property.description}
               </p>
 
               {/* Features */}
               <div className="mt-16">
-                <p className="mb-8 text-[10px] uppercase tracking-[0.4em] text-champagne">
+                <p className="mb-8 text-xs uppercase tracking-[0.4em] text-champagne">
                   Amenities & Features
                 </p>
                 <div className="grid gap-px bg-taupe/40 md:grid-cols-2">
                   {property.features.map((feature) => (
                     <div
                       key={feature}
-                      className="bg-ivory py-5 pr-6 text-sm text-navy"
+                      className="bg-ivory py-5 pr-6 text-base text-navy"
                     >
                       {feature}
                     </div>
@@ -154,7 +154,7 @@ export default async function PropertyDetailPage({
 
               {/* Gallery */}
               <div className="mt-20">
-                <p className="mb-8 text-[10px] uppercase tracking-[0.4em] text-champagne">
+                <p className="mb-8 text-xs uppercase tracking-[0.4em] text-champagne">
                   Gallery
                 </p>
                 <Gallery images={property.gallery} name={property.name} />
@@ -206,14 +206,14 @@ export default async function PropertyDetailPage({
                     href={property.ctaHref}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-10 block w-full border border-navy bg-navy px-6 py-4 text-center text-[10px] uppercase tracking-[0.3em] text-ivory transition-all duration-150 hover:bg-transparent hover:text-navy"
+                    className="mt-10 block w-full border border-navy bg-navy px-6 py-4 text-center text-xs uppercase tracking-[0.3em] text-ivory transition-all duration-150 hover:bg-transparent hover:text-navy"
                   >
                     {property.ctaLabel}
                   </a>
                 ) : (
                   <Link
                     href={property.ctaHref}
-                    className="mt-10 block w-full border border-navy px-6 py-4 text-center text-[10px] uppercase tracking-[0.3em] text-navy transition-all duration-150 hover:bg-navy hover:text-ivory"
+                    className="mt-10 block w-full border border-navy px-6 py-4 text-center text-xs uppercase tracking-[0.3em] text-navy transition-all duration-150 hover:bg-navy hover:text-ivory"
                   >
                     {property.ctaLabel}
                   </Link>
@@ -222,7 +222,7 @@ export default async function PropertyDetailPage({
 
               <Link
                 href="/properties"
-                className="mt-10 block text-center text-[10px] uppercase tracking-[0.3em] text-slate transition-colors duration-150 hover:text-navy"
+                className="mt-10 block text-center text-xs uppercase tracking-[0.3em] text-slate transition-colors duration-150 hover:text-navy"
               >
                 ← All Properties
               </Link>

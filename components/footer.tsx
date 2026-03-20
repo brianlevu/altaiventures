@@ -5,7 +5,7 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-navy py-24">
+    <footer className="bg-navy py-28">
       <div className="container-shell">
         {/* Top: logo centered */}
         <div className="flex justify-center mb-16">
@@ -16,9 +16,11 @@ export function Footer() {
         <nav className="flex flex-wrap justify-center gap-8 mb-16">
           {[
             ["Properties", "/properties"],
+            ["App", "/landlord-hours"],
             ["About", "/#about"],
             ["Contact", "/#contact"],
             ["Brand", "/brand"],
+            ["Terms", "/terms"],
           ].map(([label, href]) => (
             <Link
               key={label}

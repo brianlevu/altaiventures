@@ -7,16 +7,16 @@ export function PropertiesSection() {
   const [primary, ...secondary] = properties;
 
   return (
-    <section id="properties" className="bg-ivory py-36">
+    <section id="properties" className="bg-ivory py-28">
       <div className="container-shell">
         {/* Section header */}
-        <div className="mb-20 flex items-end justify-between">
+        <div className="mb-16 flex items-end justify-between">
           <Reveal variant="up">
             <div>
-              <p className="mb-5 text-xs uppercase tracking-[0.3em] text-champagne">
+              <p className="mb-4 text-xs uppercase tracking-[0.3em] text-champagne">
                 Our Portfolio
               </p>
-              <h2 className="display text-[clamp(2.5rem,5vw,4rem)] text-navy">
+              <h2 className="display text-[clamp(2.5rem,5vw,3.5rem)] text-navy">
                 East Bay Properties
               </h2>
             </div>
@@ -31,12 +31,12 @@ export function PropertiesSection() {
           </Reveal>
         </div>
 
-        {/* Grid: featured left, secondary right */}
+        {/* Grid: featured left, secondary right — matched height */}
         <div className="grid gap-px bg-taupe/60 lg:grid-cols-12">
-          {/* Featured */}
+          {/* Featured — left */}
           <Reveal variant="up" className="lg:col-span-7">
-            <article className="group bg-ivory">
-              <div className="relative aspect-[4/3] overflow-hidden">
+            <article className="group flex h-full flex-col bg-ivory">
+              <div className="relative h-[320px] overflow-hidden">
                 <Image
                   src={primary.heroImage}
                   alt={primary.name}
@@ -44,19 +44,19 @@ export function PropertiesSection() {
                   className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
                 />
               </div>
-              <div className="pb-4 pr-10 pt-10">
-                <p className="mb-4 text-xs uppercase tracking-[0.3em] text-champagne">
+              <div className="flex flex-1 flex-col pb-6 pr-10 pt-8">
+                <p className="mb-3 text-xs uppercase tracking-[0.3em] text-champagne">
                   {primary.type.replace("-", " ")} · {primary.city}
                 </p>
-                <h3 className="display mb-4 text-[2.5rem] text-navy">
+                <h3 className="display mb-3 text-[2rem] text-navy">
                   {primary.street}
                 </h3>
-                <p className="mb-8 max-w-lg text-base leading-[1.8] text-navy/80">
+                <p className="mb-6 max-w-lg text-[15px] leading-[1.7] text-navy/80">
                   {primary.summary}
                 </p>
                 <Link
                   href={`/properties/${primary.slug}`}
-                  className="inline-block border-b border-champagne/50 pb-1 text-xs uppercase tracking-[0.2em] text-navy transition-colors duration-150 ease-out hover:border-champagne hover:text-champagne"
+                  className="mt-auto inline-block w-fit border-b border-champagne/50 pb-1 text-xs uppercase tracking-[0.2em] text-navy transition-colors duration-150 ease-out hover:border-champagne hover:text-champagne"
                 >
                   Discover More
                 </Link>
@@ -64,12 +64,12 @@ export function PropertiesSection() {
             </article>
           </Reveal>
 
-          {/* Secondary stack — stagger 40ms per item */}
+          {/* Secondary stack — right */}
           <div className="flex flex-col gap-px bg-taupe/60 lg:col-span-5">
             {secondary.map((prop, i) => (
               <Reveal key={prop.slug} variant="up" delay={i * 40}>
                 <article className="group flex flex-1 flex-col bg-ivory">
-                  <div className="relative h-60 overflow-hidden">
+                  <div className="relative h-[180px] overflow-hidden">
                     <Image
                       src={prop.heroImage}
                       alt={prop.name}
@@ -77,14 +77,14 @@ export function PropertiesSection() {
                       className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
                     />
                   </div>
-                  <div className="flex flex-1 flex-col px-8 pb-8 pt-8">
-                    <p className="mb-3 text-xs uppercase tracking-[0.3em] text-champagne">
+                  <div className="flex flex-1 flex-col px-6 pb-6 pt-5">
+                    <p className="mb-2 text-xs uppercase tracking-[0.3em] text-champagne">
                       {prop.type.replace("-", " ")} · {prop.city}
                     </p>
-                    <h3 className="display mb-3 text-2xl text-navy">
+                    <h3 className="display mb-2 text-xl text-navy">
                       {prop.street}
                     </h3>
-                    <p className="mb-6 text-base leading-relaxed text-navy/80">
+                    <p className="mb-4 text-sm leading-[1.6] text-navy/80">
                       {prop.summary}
                     </p>
                     <Link

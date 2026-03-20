@@ -2,47 +2,50 @@ import { Reveal } from "@/components/reveal";
 
 export function ContactSection() {
   return (
-    <section id="contact" className="bg-white py-36">
-      <div className="container-shell">
+    <section id="contact" className="bg-ivory px-6 py-28 md:px-0">
+      <div className="mx-auto w-full max-w-[960px]">
         {/* Header */}
         <Reveal variant="up">
-          <div className="mx-auto mb-20 max-w-2xl text-center">
-            <p className="mb-5 text-xs uppercase tracking-[0.3em] text-champagne">
-              Contact
+          <div className="mx-auto mb-16 max-w-2xl text-center">
+            <p className="mb-4 text-xs font-medium tracking-[4px] text-champagne">
+              CONTACT
             </p>
-            <h2 className="display mb-8 text-[clamp(2rem,4vw,3.5rem)] text-navy">
+            <h2 className="display mb-4 text-[clamp(2rem,4vw,2.75rem)] text-navy">
               Begin Your Inquiry
             </h2>
-            <p className="text-base leading-[1.8] text-navy/80">
+            <p className="mb-4 text-[15px] leading-[1.8] text-navy/80">
               Interested in Santa Ray for a short stay, or want updates when a
               long-term home becomes available? We respond within two business days.
             </p>
+            <div className="mx-auto h-px w-12 bg-champagne/40" />
           </div>
         </Reveal>
 
         {/* Form */}
         <Reveal variant="up" delay={40}>
           <form className="mx-auto max-w-2xl">
-            <div className="grid gap-12 md:grid-cols-2">
-              <div className="group border-b border-taupe/60 pb-3 transition-colors duration-200 ease-out focus-within:border-champagne">
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Full Name"
-                  className="w-full bg-transparent text-base text-navy placeholder:text-slate/60 outline-none"
-                  required
-                />
+            <div className="flex flex-col gap-9">
+              <div className="grid gap-12 md:grid-cols-2">
+                <div className="border-b border-navy/10 pb-3.5 transition-colors duration-200 ease-out focus-within:border-champagne">
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Full Name"
+                    className="w-full bg-transparent text-base text-navy placeholder:text-slate/40 outline-none"
+                    required
+                  />
+                </div>
+                <div className="border-b border-navy/10 pb-3.5 transition-colors duration-200 ease-out focus-within:border-champagne">
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Email Address"
+                    className="w-full bg-transparent text-base text-navy placeholder:text-slate/40 outline-none"
+                    required
+                  />
+                </div>
               </div>
-              <div className="group border-b border-taupe/60 pb-3 transition-colors duration-200 ease-out focus-within:border-champagne">
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Email Address"
-                  className="w-full bg-transparent text-base text-navy placeholder:text-slate/60 outline-none"
-                  required
-                />
-              </div>
-              <div className="border-b border-taupe/60 pb-3 transition-colors duration-200 ease-out focus-within:border-champagne md:col-span-2">
+              <div className="border-b border-navy/10 pb-3.5 transition-colors duration-200 ease-out focus-within:border-champagne">
                 <select
                   name="interest"
                   className="w-full bg-transparent text-base text-slate/70 outline-none appearance-none cursor-pointer"
@@ -54,22 +57,22 @@ export function ContactSection() {
                   <option value="general">General inquiry</option>
                 </select>
               </div>
-              <div className="border-b border-taupe/60 pb-3 transition-colors duration-200 ease-out focus-within:border-champagne md:col-span-2">
+              <div className="border-b border-navy/10 pb-3.5 transition-colors duration-200 ease-out focus-within:border-champagne">
                 <textarea
                   name="message"
                   placeholder="Your Message"
                   rows={4}
-                  className="w-full resize-none bg-transparent text-base text-navy placeholder:text-slate/60 outline-none"
+                  className="w-full resize-none bg-transparent text-base text-navy placeholder:text-slate/40 outline-none"
                 />
               </div>
             </div>
 
-            <div className="mt-16 text-center">
+            <div className="mt-10 text-center">
               <button
                 type="submit"
-                className="border border-navy px-12 py-4 text-xs uppercase tracking-[0.25em] text-navy transition-all duration-150 ease-out hover:bg-navy hover:text-ivory active:scale-[0.98]"
+                className="bg-navy px-14 py-4 text-xs font-medium tracking-[4px] text-white transition-all duration-150 ease-out hover:bg-navy/90 active:scale-[0.98]"
               >
-                Send Inquiry
+                SEND INQUIRY
               </button>
             </div>
           </form>
